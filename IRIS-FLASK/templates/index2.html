@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 50%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: orange;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  align-content: center;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<h2>IRIS - DATASET</h2>
+
+<div class="container">
+  <form action="http://0.0.0.0:8078/result", method="POST">
+  <div class="row">
+    <div class="col-25">
+      <label for="sepallength">SEPAL LENGTH</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="sl" name="sl" placeholder="Enter sepal length">
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-25">
+      <label for="sepalwidth">SEPAL WIDTH</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="sw" name="sw" placeholder="Enter sepal width">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-25">
+      <label for="petallength">PETAL LENGTH</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="pl" name="pl" placeholder="Enter petal length">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-25">
+      <label for="petalwidth">PETAL WIDTH</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="pw" name="pw" placeholder="Enter petal width">
+    </div>
+  </div>
+
+
+
+  <!--<div class="row">
+    <div class="col-25">
+      <label for="country">Country</label>
+    </div>
+    <div class="col-75">
+      <select id="country" name="country">
+        <option value="australia">Australia</option>
+        <option value="canada">Canada</option>
+        <option value="usa">USA</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="subject">Subject</label>
+    </div>
+    <div class="col-75">
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+    </div>
+  </div>-->
+  <center>
+  <div class="row">
+    <a href="http://0.0.0.0:8078/result">
+    <input type="submit" value="Submit">
+  </div>
+</center>
+  </form>
+</div>
+
+</body>
+</html>
